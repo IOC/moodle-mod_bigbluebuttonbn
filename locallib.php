@@ -539,7 +539,7 @@ function bigbluebuttonbn_wrap_xml_load_file($url, $method = 'GET', $data = null,
  */
 function bigbluebuttonbn_wrap_xml_load_file_curl_request($url, $method = 'GET', $data = null, $contenttype = 'text/xml') {
     $c = new curl();
-    $c->setopt(array('SSL_VERIFYPEER' => true));
+    $c->setopt(array('SSL_VERIFYPEER' => false));
     if ($method == 'POST') {
         if (is_null($data) || is_array($data)) {
             return $c->post($url);
